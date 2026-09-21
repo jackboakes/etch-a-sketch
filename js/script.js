@@ -8,12 +8,16 @@ function addTile(size) {
     let tile = document.createElement("div");
     tile.classList.add("tile");
     tile.style.width = `${size}px`;
+    tile.style.opacity = 0.1;
 
     tile.addEventListener("mouseover", () => {
         const r = getRandomInt(255);
         const g = getRandomInt(255);
         const b = getRandomInt(255);
         tile.style.backgroundColor = `rgb(${r},${g},${b})`;
+
+        const opacityVal = parseFloat(tile.style.opacity)
+        tile.style.opacity = opacityVal + 0.1;
     });
 
     gridContainer.appendChild(tile);
