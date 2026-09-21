@@ -1,13 +1,19 @@
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
 const gridContainer = document.querySelector("#container");
 
 function addTile(size) {
     let tile = document.createElement("div");
     tile.classList.add("tile");
     tile.style.width = `${size}px`;
-    tile.style.height = `${size}px`;
 
     tile.addEventListener("mouseover", () => {
-        tile.classList.add("tile-hovered");
+        const r = getRandomInt(255);
+        const g = getRandomInt(255);
+        const b = getRandomInt(255);
+        tile.style.backgroundColor = `rgb(${r},${g},${b})`;
     });
 
     gridContainer.appendChild(tile);
@@ -28,8 +34,13 @@ const button = document.querySelector("button");
 button.addEventListener("click", () => {
     gridContainer.textContent = "";
 
-    let columns = prompt("Enter the number of columns for your grid: ");
-    
+    let columns = prompt("Enter a number of grid columns between 1 and 100: ");
+
+    if(!Number(columns))
+    {
+        columns = 16;
+    }
+
     if(columns > 100) {
         columns = 100;
     }
