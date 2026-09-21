@@ -6,6 +6,9 @@
 body {
     background-color: #f2e9e4;
     color: #22223b;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .title {
@@ -16,14 +19,14 @@ body {
 #container,
 #border {
     display: flex;
-    margin: 0 auto;
     flex-wrap: wrap;
     aspect-ratio: 1;
-    width: 800px;
+    width: 700px;
 }
 
 #border {
     border: 1px solid #22223b;
+    margin-bottom: 2rem;
 }
 
 .tile {
@@ -39,10 +42,11 @@ button {
     display: block;
     margin: 0 auto;
     margin-block: 1rem 2rem;
-    background-color: #22223b;
+    background-color: #c9ada7;
     padding: 0.75rem 1rem;
     font-weight: bold;
-    color: #f2e9e4;
+    color: #22223b;
+    border: 1px solid #22223b;
 }
 
 
