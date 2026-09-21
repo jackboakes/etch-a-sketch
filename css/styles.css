@@ -18,10 +18,13 @@ body {
 
 #container,
 #border {
-    display: flex;
-    flex-wrap: wrap;
     aspect-ratio: 1;
     width: 700px;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #border {
@@ -29,8 +32,9 @@ body {
     margin-bottom: 2rem;
 }
 
+
+
 .tile {
-    background-color: #c9ada7;
     aspect-ratio: 1;
 }
 

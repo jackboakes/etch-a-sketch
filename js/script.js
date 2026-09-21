@@ -8,7 +8,7 @@ function addTile(size) {
     let tile = document.createElement("div");
     tile.classList.add("tile");
     tile.style.width = `${size}px`;
-    tile.style.opacity = 0.1;
+    tile.style.opacity = 0.0;
 
     tile.addEventListener("mouseover", () => {
         const r = getRandomInt(255);
